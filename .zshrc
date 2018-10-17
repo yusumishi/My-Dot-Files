@@ -8,8 +8,8 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
-BULLETTRAIN_CONTEXT_BG="green"
-BULLETTRAIN_CONTEXT_FG="black"
+#BULLETTRAIN_CONTEXT_BG="green"
+#BULLETTRAIN_CONTEXT_FG="black"
 BULLETTRAIN_VIRTUALENV_FG="black"
 BULLETTRAIN_DIR_EXTENDED=0
 
@@ -79,6 +79,7 @@ plugins=(
   zsh-autosuggestions
   python
   sublime
+  auto-color-ls
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,4 +140,6 @@ export LIBGL_ALWAYS_INDIRECT=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias vim="nvim"
-
+cat ~/.cache/wal/sequences
+alias lk='colorls -lA --sd --gs'
+alias lm='colorls -A --sd --gs'
